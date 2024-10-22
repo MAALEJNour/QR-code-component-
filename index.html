@@ -7,20 +7,65 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | QR code component</title>
-
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); }      
+        /* Base styles for mobile-first (default 375px and smaller) */
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 10px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1, p {
+            margin: 0 0 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* Media query for desktop (min-width: 1440px) */
+        @media (min-width: 1440px) {
+            body {
+                font-size: 20px;
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 1200px;
+            }
+
+            /* Adjust layout for desktop */
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .flex-item {
+                flex: 1 1 30%;
+                margin: 10px;
+            }
+        }
+    
   </style>
 </head>
 <body>
-  <picture>
-    <!-- Image for mobile devices (max-width 768px) -->
-    <source media="(max-width: 768px)" srcset= "design/mobile-design.jpg">
-    <!-- Default image for larger devices (desktops) -->
-    <img src= "design/desktop-design.jpg" style="max-width: 100%; height: auto;">
-  </picture>
+  <main class="container">
+       <!-- Responsive image for mobile and desktop -->
+    <section>
+        <picture>
+            <source media="(max-width: 768px)" srcset= "design/mobile-design.jpg">
+            <img src= "design/desktop-design.jpg" style="max-width: 100%; height: auto;">      
+        </picture>
+    </section>
+  </main>
   Improve your front-end skills by building projects
 
   Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
