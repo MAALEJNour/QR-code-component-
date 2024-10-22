@@ -15,9 +15,12 @@
   </style>
 </head>
 <body>
-  <img src="design/desktop-design.jpg">
-  <img src="design/mobile-design.jpg">
-
+  <picture>
+    <!-- Image for mobile devices (max-width 768px) -->
+    <source media="(max-width: 768px)" srcset=> "design/mobile-design.jpg">
+    <!-- Default image for larger devices (desktops) -->
+    <img src= "design/desktop-design.jpg" style="max-width: 100%; height: auto;">
+  </picture>
   Improve your front-end skills by building projects
 
   Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
